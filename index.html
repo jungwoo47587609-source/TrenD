@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TrenD · 숏폼 트렌드 차트</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="틱톡·인스타그램·유튜브 숏츠의 실시간 트렌드 차트와 급상승 영상 1~100위" />
+</head>
+<body>
+  <div class="app">
+    <!-- 헤더 -->
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-mark">T</span>
+        <span class="brand-name">TrenD</span>
+      </div>
+      <div class="header-meta">
+        <span class="live-badge" id="live-badge">● LIVE</span>
+        <span class="header-sub">틱톡 · 인스타 · 유튜브 숏츠</span>
+      </div>
+    </header>
+
+    <!-- 상단 요약 -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1 class="hero-title">지금, 숏폼 차트의 1위</h1>
+        <p class="hero-sub">플랫폼별 트렌드 점수와 급상승 영상 순위를 한 화면에서 보세요.</p>
+      </div>
+      <div class="hero-toggles">
+        <div class="chart-mode" id="chart-mode">
+          <button class="chart-mode-btn active" data-mode="score">트렌드 점수</button>
+          <button class="chart-mode-btn" data-mode="views">조회수</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 차트 -->
+    <section class="card chart-card">
+      <div class="card-head">
+        <div>
+          <h2 class="card-title">트렌드 흐름 · 실시간-ish</h2>
+          <p class="card-sub">최근 10분 간격 트렌드 점수 추이</p>
+        </div>
+        <div class="chart-legend" id="chart-legend"></div>
+      </div>
+      <div class="chart-stage" id="chart"></div>
+      <div class="live-bar" id="live-stream">
+        <span class="live-pulse"></span>
+        <span>데이터가 실시간으로 조금씩 움직여요</span>
+      </div>
+    </section>
+
+    <!-- 키워드 필터 -->
+    <section class="card filter-card">
+      <div class="card-head">
+        <div>
+          <h2 class="card-title">키워드로 필터</h2>
+          <p class="card-sub">보고 싶은 카테고리만 골라 순위·차트를 좁히세요</p>
+        </div>
+        <button class="btn-ghost" id="btn-all">전체 보기</button>
+      </div>
+      <div class="keyword-wrap" id="keyword-wrap"></div>
+    </section>
+
+    <!-- 순위 리스트 -->
+    <section class="card rank-card">
+      <div class="card-head">
+        <div>
+          <h2 class="card-title">급상승 숏폼 1위~100위</h2>
+          <p class="card-sub" id="rank-summary">전체 플랫폼 기준 · 트렌드 점수 가중</p>
+        </div>
+        <div class="rank-toggle">
+          <button class="live-toggle" id="live-toggle" data-on="1" aria-pressed="true">
+            <span class="live-dot"></span>
+            자동 갱신 켜기
+          </button>
+        </div>
+      </div>
+      <div class="rank-scroll" id="rank-scroll">
+        <div class="rank-list" id="rank-list"></div>
+      </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="site-footer">
+      <div class="footer-row">
+        <span class="footer-brand">TrenD</span>
+        <span class="footer-sub">숏폼 트렌드 차트 · 샘플 데이터 기반 프로토타입</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
